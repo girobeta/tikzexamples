@@ -1,0 +1,60 @@
+\begin{center} %Set and interval table
+    \begin{scriptsize}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+            INTERVAL TYPE &
+            SET-BUILDER &
+            INTERVAL &
+            GRAPH \\
+        \hline
+            Finite and closed &
+            $\{x|a\le x\le b\}$ &
+            $[a,b]$ &
+            \begin{tikzpicture}[baseline=0, scale=0.6]
+                \draw[<->] (0,0) --(4,0);
+                \draw[blue, line width=1pt] (1,0) --(3,0);
+                \filldraw[blue] (1,0) circle (3pt) node[anchor=south]{$a$};
+                \filldraw[blue] (3,0) circle (3pt) node[anchor=south]{$b$};
+            \end{tikzpicture} \\
+        \hline
+            Finite and open &
+            $\{x|a<x<b\}$ &
+            $(a,b)$ &
+            \begin{tikzpicture}[baseline=0, scale=0.6]
+                \draw[<->] (0,0) --(4,0);
+                \draw[blue, line width=1pt] (1,0) --(3,0);
+                \draw[blue] (1,0) circle (3pt) node[anchor=south]{$a$};
+                \draw[blue] (3,0) circle (3pt) node[anchor=south]{$b$};
+            \end{tikzpicture} \\
+        \hline
+            Finite and half-open &
+            $\{x|x<a\le b\}$ &
+            $\phantom{[}(a,b]\phantom{)}$ &
+            \begin{tikzpicture}[baseline=0, scale=0.6]
+                \draw[<->] (0,0) --(4,0);
+                \draw[blue, line width=1pt] (1,0) --(3,0);
+                \draw[blue] (1,0) circle (3pt) node[anchor=south]{$a$};
+                \filldraw[blue] (3,0) circle (3pt) node[anchor=south]{$b$};
+            \end{tikzpicture} \\
+        \hline
+            Infinite and closed &
+            $\{x|x\le b\}$ &
+            $\phantom{[}(\infty,b]\phantom{)}$ &
+            \begin{tikzpicture}[baseline=0, scale=0.6]
+                \draw[<->] (0,0) --(4,0);
+                \draw[->, blue, line width=1pt] (3,0) --(0,0);
+                \filldraw[blue] (3,0) circle (3pt) node[anchor=south]{$b$};
+            \end{tikzpicture} \\
+        \hline
+            Infinite and open &
+            $\{x|x>a\}$ &
+            $(a,\infty)$ &
+            \begin{tikzpicture}[baseline=0, scale=0.6]
+                \draw[<->] (0,0) --(4,0);
+                \draw[->, blue, line width=1pt] (1,0) --(4,0);
+                \draw[blue] (1,0) circle (3pt) node[anchor=south]{$a$};
+            \end{tikzpicture} \\
+        \hline
+    \end{tabular}
+    \end{scriptsize}
+\end{center}
