@@ -1,0 +1,73 @@
+\newcommand{\rred}{red}  % magenta - red
+\newcommand{\bblue}{blue}    % cyan - blue
+\newcommand{\ggreen}{ForestGreen} % yellow - ForestGreen
+\newcommand{\ccolors}{
+  \renewcommand{\rred}{magenta}
+  \renewcommand{\bblue}{cyan}
+  \renewcommand{\ggreen}{yellow}
+}
+
+\newcommand{\boxindex}[2]{
+  \vspace{6pt}
+  \index{#1}
+  \noindent\fbox{\parbox{\textwidth}{
+  \vspace{2pt}
+  \hspace{4pt}{\fontfamily{qcr}\selectfont #1}
+  \vspace{2pt} \\
+  #2}}
+  \vspace{6pt}
+}
+
+\boxindex{Possible Solution Sets of an Equation Between Two Linear Functions}{
+    If $f$ and $g$ are linear functions, then their graphs are lines that intersect at a single point, no point, or infinitely many points.
+    \begin{center}
+    \begin{tabular}{LLL}
+        \begin{tikzpicture}[scale=0.4]
+            \begin{axis}[
+                xmin=-3, xmax=3,
+                ymin=-3, ymax=3,
+                axis lines=middle,
+                axis line style=dashed,
+                xticklabels={},
+                yticklabels={},
+                xtick={},
+                ytick={}
+            ]
+                \addplot[<->, domain=-2:2, \bblue, line width=2pt]{x-1};
+                \addplot[<->, domain=-2:2, \rred, line width=2pt]{-x};
+                \filldraw[\ggreen](0.5,-0.5)circle(5pt);
+            \end{axis}
+        \end{tikzpicture} &
+        \begin{tikzpicture}[scale=0.4]
+            \begin{axis}[
+                xmin=-3, xmax=3,
+                ymin=-3, ymax=3,
+                axis lines=middle,
+                axis line style=dashed,
+                xticklabels={},
+                yticklabels={},
+                xtick={},
+                ytick={}
+            ]
+                \addplot[<->, domain=-2:2, \bblue, line width=2pt]{-x-1};
+                \addplot[<->, domain=-2:2, \rred, line width=2pt]{-x};
+            \end{axis}
+        \end{tikzpicture} &
+        \begin{tikzpicture}[scale=0.4]
+            \begin{axis}[
+                xmin=-3, xmax=3,
+                ymin=-3, ymax=3,
+                axis lines=middle,
+                axis line style=dashed,
+                xticklabels={},
+                yticklabels={},
+                xtick={},
+                ytick={}
+            ]
+                \addplot[<->, domain=-2:2, \ggreen, line width=2pt]{x};
+            \end{axis}
+        \end{tikzpicture} \\
+        One Solution (Conditional) & No Solution (Contradiction) & Infinitely Many Solutions (Identity) \\
+    \end{tabular}
+    \end{center}
+}
