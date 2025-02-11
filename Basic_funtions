@@ -6,6 +6,14 @@
   \renewcommand{\bblue}{cyan}
   \renewcommand{\ggreen}{yellow}
 }
+\newcommand{\shapefocus}{
+  axis lines=middle,
+  axis line style=dashed,
+  xticklabels={},
+  yticklabels={},
+  xtick={},
+  ytick={}
+}
 
 \section*{Basic functions}
 \begin{center}
